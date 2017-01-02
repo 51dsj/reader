@@ -1,0 +1,52 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}民主楼——发现优质内容!{% endblock %}
+{% import "bootstrap/fixes.html" as fixes %}
+
+{% block head %}
+{{super()}}
+{{fixes.ie8()}}
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="shortcut icon" href="{{url_for('.static', filename='images/favicon.ico')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/mzl.css')}}">
+{% endblock %}
+
+
+{% block navbar %}
+<!--<div class="navbar navbar-fixed-top"></div>-->
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle"data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">民主楼</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">资讯头条</a></li>
+                <li><a href="/tech/">开发者头条</a></li>
+            </ul>
+            <form  class='form-inline navbar-form navbar-right'>
+                <a class="btn btn-default" href="/auth/login" role="button">登 录</a>
+                <a class="btn btn-default" href="/auth/signup" role="button">注 册</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+
+{% block scripts %}
+{{super()}}
+    <script src="{{url_for('.static', filename='js/mzl.js')}}"></script>
+{% endblock %}

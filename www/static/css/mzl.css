@@ -1,0 +1,52 @@
+/**
+** author: zhangrunqin
+**/
+.login-wrapper{
+    padding:40px 0;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+.login-wrapper .login-sns{
+    display: inline-block;
+    margin-left: 0;
+}
+.login-wrapper .login-sns a{
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 44px;
+    font-size: 20px;
+    background: #EEE;
+}
+#capInput {
+        padding-left: 90px;
+}
+
+.toutiao {
+  border-bottom: 1px dashed #e3ecec;
+  padding-left: 15px;
+  position: relative;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+.toutiao a{
+color:#555;
+}
+.toutiao a:hover{
+text-decoration:none;
+color:#555;
+}
+.toutiao_title{
+border-bottom:3px solid #46b855;
+color:#46b855;
+padding-bottom:4px;
+}
+
+.footer {
+    color:#555;
+}
+.footer a{
+    color:#555;
+}

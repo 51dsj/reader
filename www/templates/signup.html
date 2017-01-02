@@ -1,0 +1,33 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="login-wrapper">
+        <a href="/"><img width="280" src="{{url_for('.static', filename='images/logo.png')}}"></a>
+        <br/><br/><hr/>
+        <div class="form-group" >
+            <a href="/auth/login"><font color="#aaa" size="4">登 录</font></a><span>  ·   </span><a href="/auth/signup"><font color="#333" size="4">注 册</font></a>
+        </div>
+        <form  action="/auth/signup" method="POST" class="form-signin">
+             <!--p><font color="red" size="4">{{error}}</font></p-->
+            <div class="form-group">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon"> <i class="glyphicon glyphicon-envelope"></i></span>
+                    <input type="email" name="email" class="form-control" placeholder="你的邮箱地址"  required autofocus>
+                </div><br/>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" name="nickname" class="form-control" placeholder="选一个昵称"  required>
+                </div><br/>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon"> <i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" name="password" class="form-control" placeholder="设置密码"  required>
+                </div><br/>
+
+                <button class="btn btn-lg btn-success btn-block" type="submit">注 册</button>
+            </div>
+        </form>
+        <hr/>
+    </div>
+</div>
+{% endblock %}
